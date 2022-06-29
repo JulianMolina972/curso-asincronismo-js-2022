@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "callback": "node src/callback/challenge.js"
+    "callback": "node src/callback/challenge.js",
+    "promise": "node src/promise/challenge.js"
   },
   "keywords": [
     "javaScript"
@@ -12,6 +13,8 @@
   "author": "Julian Molina <juliandavidmv@ufps.edu.co>",
   "license": "MIT",
   "dependencies": {
+    "node-fetch": "^3.2.6",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "type": "module"
 }
