@@ -2,9 +2,18 @@ import fetch from "node-fetch";
 const API = 'https://api.escuelajs.co/api/v1';
 
 
+
+const data = {
+  "title": "247 put",
+  "price": 248,
+  // "description": "A description method put",
+  // "categoryId": 1,
+  // "images": ["https://placeimg.com/640/480/any"]
+}
+
 function postData(urlApi, data) {
   const response = fetch(urlApi, {
-    method: 'POST',
+    method: 'PUT',
     mode: 'cors',
     credentials: 'same-origin',
     headers: {
@@ -15,16 +24,10 @@ function postData(urlApi, data) {
   return response;
 }
 
-const data = {
-  "title": "247",
-  "price": 247,
-  "description": "A description",
-  "categoryId": 1,
-  "images": ["https://placeimg.com/640/480/any"]
-}
 
 
-postData(`${API}/products`, data)
+
+postData(`${API}/products/247`, data)
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.log(error));
